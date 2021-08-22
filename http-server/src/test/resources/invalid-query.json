@@ -1,0 +1,4 @@
+{
+  "query": "query News {    news-invalid {  title, link    }}",
+  "variables": {}
+}

@@ -1,0 +1,4 @@
+{
+  "query": "query News {    news {  title, link    }}",
+  "variables": {}
+}

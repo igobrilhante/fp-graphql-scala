@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:11.9-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  http-server:
+    image: igobrilhante/httpserver:0.2.0
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
+    environment:
+      DB_PASS: postgres
+      DB_USERNAME: postgres
+      DB_HOST: postgres
+
+  web-scrapper:
+    image: igobrilhante/webscraper:0.2.0
+    depends_on:
+      - postgres
+    environment:
+      DB_PASS: postgres
+      DB_USERNAME: postgres
+      DB_HOST: postgres
