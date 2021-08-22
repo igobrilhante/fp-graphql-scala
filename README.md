@@ -1,4 +1,5 @@
-[[_TOC_]]
+FP GraphQL Scala
+=================
 
 # 1. Project
 
