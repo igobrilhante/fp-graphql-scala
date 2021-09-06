@@ -4,7 +4,7 @@ import scala.concurrent.ExecutionContext
 import scala.util.{Failure, Success}
 
 import cats.effect.kernel.Async
-import cats.syntax.all._
+import cats.implicits._
 import com.igobrilhante.graphqlscraper.core.entities.GraphQLApiQuery
 import com.igobrilhante.graphqlscraper.core.logging.Logging
 import com.igobrilhante.graphqlscraper.core.schema.GraphQL

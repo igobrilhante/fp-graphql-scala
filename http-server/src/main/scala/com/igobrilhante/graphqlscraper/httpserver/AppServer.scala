@@ -9,6 +9,7 @@ import com.igobrilhante.graphqlscraper.core.sangria.SangriaComponents
 import org.http4s.HttpApp
 import org.http4s.blaze.server.BlazeServerBuilder
 import org.http4s.server.Server
+import zio.Task
 
 trait AppServer {
 
@@ -16,6 +17,14 @@ trait AppServer {
 
   // Resource that constructs our final server.
   def serverFromResource[F[_]: Async](): Resource[F, Server]
+}
+
+trait AppServerZio {
+
+  def server(routes: HttpApp[Task]): Resource[Task, Server]
+
+  // Resource that constructs our final server.
+  def serverFromResource(): Resource[Task, Server]
 }
 
 object AppServer {

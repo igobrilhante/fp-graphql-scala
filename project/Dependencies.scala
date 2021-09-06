@@ -2,20 +2,25 @@ import sbt._
 
 object Dependencies {
 
-  lazy val http4sVersion        = "0.23.1"
-  lazy val doobieVersion        = "1.0.0-M5"
-  lazy val logbackVersion       = "1.3.0-alpha9"
-  lazy val catsEffectVersion    = "3.2.2"
+  lazy val calibanVersion       = "1.1.1"
+  lazy val catsEffectVersion    = "3.2.5"
   lazy val catsVersion          = "2.6.1"
   lazy val circleVersion        = "0.14.1"
   lazy val circleConfigVersion  = "0.8.0"
+  lazy val doobieVersion        = "1.0.0-M5"
+  lazy val http4sVersion        = "0.23.1"
+  lazy val logbackVersion       = "1.3.0-alpha9"
   lazy val sangriaVersion       = "2.1.3"
   lazy val sangriaCircleVersion = "1.3.2"
   lazy val scalaScraperVersion  = "2.2.1"
   //
   lazy val scalaTestVersion      = "3.2.9"
-  lazy val zioVersion            = "1.0.10"
+  lazy val zioVersion            = "1.0.11"
   lazy val zioInteropCatsVersion = "3.1.1.0"
+
+  //
+  lazy val caliban      = "com.github.ghostdogpr" %% "caliban"        % calibanVersion
+  lazy val calibanHttp4s = "com.github.ghostdogpr" %% "caliban-http4s" % calibanVersion
 
   lazy val sangria       = "org.sangria-graphql" %% "sangria"       % sangriaVersion
   lazy val sangriaCircle = "org.sangria-graphql" %% "sangria-circe" % sangriaCircleVersion

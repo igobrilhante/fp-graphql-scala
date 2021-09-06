@@ -19,6 +19,9 @@ lazy val commonsSettings = Seq(
   coverageMinimumBranchPerPackage := 85,
   libraryDependencies ++= Seq(
     scalaScraper,
+    // caliban
+    caliban,
+    calibanHttp4s,
     // circle
     circleCore,
     circleGeneric,

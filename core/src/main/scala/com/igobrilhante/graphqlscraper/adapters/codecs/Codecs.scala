@@ -1,6 +1,6 @@
 package com.igobrilhante.graphqlscraper.adapters.codecs
 
-import cats.syntax.functor._
+import cats.implicits._
 import com.igobrilhante.graphqlscraper.core.entities.{News, ScraperConfig}
 import com.igobrilhante.graphqlscraper.core.scraper.{FileSource, ScraperSource, WebSource}
 import io.circe.generic.auto._
