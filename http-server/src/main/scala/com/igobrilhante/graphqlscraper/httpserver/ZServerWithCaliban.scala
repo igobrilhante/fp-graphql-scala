@@ -9,7 +9,6 @@ object ZServerWithCaliban extends zio.App {
     AppServerWithCaliban
       .impl()
       .serverFromResource()
-      .toManagedZIO
       .use { _ => ZIO.never }
       .exitCode
 
